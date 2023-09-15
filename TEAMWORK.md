@@ -17,6 +17,7 @@
 ### Communication:
 * We will primarily use Slack for project-related discussions and updates.
 * Response Time: We aim to respond to team messages and requests within [timeframe].
+*Pull request: 
 
 ### Conflict Resolution:
 * We will address conflicts openly and respectfully.
