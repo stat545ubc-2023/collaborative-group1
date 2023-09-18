@@ -1,19 +1,31 @@
-# Team Contract
+<img src="https://pic.onlinewebfonts.com/thumbnails/icons_420993.svg" 
+  style="float: right; margin-right: 100px; margin-top: 20px;" width="200" />   
+  
+<img src="https://img.freepik.com/premium-vector/people-team-icon-vektor_535345-829.jpg?w=2000" 
+  style="float: right; margin-right: 40px;" width="250" />
 
-<img src="https://us.123rf.com/450wm/sapunkele/sapunkele2206/sapunkele220600047/188277933-sketch-little-people-have-a-deal-doodle-cute-miniature-of-teamwork-contract-coins-hand-drawn.jpg"
-     style="float: left; margin-right: 10px;" />    
-     
-### **Team Members**
+# **Team Contract**
+  
+### Team Members 
 * Maggie
 * Yuehao
 * Kiana
 * Keren
-* Shengyu
+* Shengyu 
 
 ### Division of Labour:
 
+Tasks for Milestone 1 will be divided through team discussion on slack. Everyone will create an *independent branch* before working on their assigned task. [include more detail... perhaps a schedule for who will be reviewing who's work]
+  
 ### Timing:
-
+| **Date**  | **Task**                            |
+|:--------- |:--------------------                |
+| Sept 14   | Create group repository             |
+| date x    | Complete GitHub issues (Exercise 4) |
+| date x    | Reply to GitHub issues (Exercise 4) |
+| date x    | Submit pull requests                |
+| Sept 22   | Milestone 1 due                     |
+  
 ### Communication:
 * We will primarily use Slack for project-related discussions and updates.
 * Response Time: We aim to respond to team messages and requests within [timeframe].
@@ -23,3 +35,4 @@
 * We will address conflicts openly and respectfully.
 * If conflicts arise, we will first attempt to resolve them through team discussion.
 * If necessary, we will seek assistance from the course instructor or teaching assistant.
+
