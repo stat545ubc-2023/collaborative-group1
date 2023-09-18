@@ -16,7 +16,20 @@
 ### Division of Labour:
 
 Tasks for Milestone 1 will be divided through team discussion on slack. Everyone will create an *independent branch* before working on their assigned task. [include more detail... perhaps a schedule for who will be reviewing who's work]
-  
+
+Create group repository : Kiana
+Complete GitHub issues :  all
+Reply to GitHub issues :  all
+Submit pull requests:
+| **submit**  | **review and merge**  |
+|:------------|:--------------------  |
+| Maggie      | Yuehao                |
+| Yuehao      |                       |
+| Kiana       |                       |
+| Keren       |                       |
+| Shengyu     |                       |
+
+
 ### Timing:
 | **Date**  | **Task**                            |
 |:--------- |:--------------------                |
