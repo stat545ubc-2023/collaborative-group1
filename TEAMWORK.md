@@ -25,6 +25,10 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 | date x    | Reply to GitHub issues (Exercise 4) |
 | date x    | Submit pull requests                |
 | Sept 22   | Milestone 1 due                     |
+| date x    | Exercise 0: Merge one Pull Request per teammate|
+| date x    | Exercise 1: Troubleshooting document|
+| date x    | Exercise 2: README file and tidy submission|
+| Sept 29   | Milestone 2 due (Exercise 3: Submitting this Milestone)|
   
 ### Communication:
 * We will primarily use Slack for project-related discussions and updates.
