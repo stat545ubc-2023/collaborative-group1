@@ -1,17 +1,18 @@
+
 # STAT 545A Collaborative Project: *Milestone 1*
 ***
 <img src="https://www.thescea.org/sites/scea/files/styles/1920wide/public/syndicated/images/student_collaboration.jpeg?itok=a-D1guBW" 
   style="float: right; margin-right: 80px;" width="500" /> 
 
+
 ### **Project Team Members**
 * Maggie
-* Yuehao
+* Edison
 * Kiana
 * Keren
-* Shengyu
+* Jacky
 
 ### **Useful Links**
-
 * [Project Repository on GitHub](https://github.com/stat545ubc-2023/collaborative-group1)
 * [Assignment Instructions](https://stat545.stat.ubc.ca/collaborative-project/milestone1/)
 
@@ -22,7 +23,6 @@ This collaborative project aims to develop students' skills in collaborating on 
 
 1. **README.md:** This file (the README you are currently reading) provides an overview of the project, lists project files, and explains how to run the code.
 
-2. **TEAMWORK.md:** This document contains guidelines and agreements for teamwork, including the division of labor, timing of submissions, and communication methods.
+2. **TEAMWORK.md:** This document contains guidelines and agreements for teamwork, including the division of labour, timing of submissions, and communication methods.
 
 3. **troubleshooting-1.Rmd:** A document that needs troubleshooting. It will be corrected as part of this milestone. 
-
