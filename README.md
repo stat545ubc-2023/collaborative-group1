@@ -26,7 +26,7 @@ This collaborative project aims to develop students' skills in collaborating on 
 2. **TEAMWORK.md:** This document contains guidelines and agreements for teamwork, including the division of labour, timing of submissions, and communication methods.
 
 3. **troubleshooting-1.Rmd:** An R markdown troubleshooting document with three errors that will need correction.
-4.  **troubleshooting-1.md:** This is the .md file of the troubleshooting document.
+4.  **troubleshooting-1.md:** This is the .md output of the troubleshooting document.
 
 ## How to run codes in our folder/Github repository
 * Clone the code
