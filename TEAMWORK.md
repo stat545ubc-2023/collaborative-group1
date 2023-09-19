@@ -6,9 +6,7 @@
   style="float: right; margin-right: 40px;" width="250" />
 
 # **Team Contract**
-  
-### Team Members 
-
+ 
      
 ### **Team Members**
 
@@ -39,7 +37,7 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 | Maggie      | Edison                |
 | Yuehao      | Jacky & Kiana         |
 | Kiana       | Edison & Keren        |
-| Keren       |                       |
+| Keren       | Kiana & Maggie        |
 | Shengyu     | Edison                |
 
 
@@ -60,8 +58,9 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 | Sept 29   | Milestone 2 due (Exercise 3: Submitting this Milestone)|
   
 ### Communication:
-* We will primarily use Slack for project-related discussions and updates.
+* Channel: We will primarily use Slack for project-related discussions and updates.
 * Response Time: We aim to respond to team messages and requests within 24 hours.
+* Other: respect, active listening, constructive feedback, meeting follow-up.
 
 ### Conflict Resolution:
 * We will address conflicts openly and respectfully.
