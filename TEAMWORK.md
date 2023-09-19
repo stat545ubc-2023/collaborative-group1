@@ -45,7 +45,7 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 ### Timing:
 | **Date**  | **Task**                            |
 |:--------- |:--------------------                |
-| **Milestone 1** <td colspan="2">                                 |
+| <**Milestone 1**  colspan="2">                                 |
 | Sept 14   | Create Group Repository             |
 | Sept 17   | Complete GitHub Issues (Exercise 4) |
 | Sept 18   | Reply to GitHub Issues (Exercise 4) |
