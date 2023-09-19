@@ -8,7 +8,7 @@
 
 
      
-## **Team Members**
+## **Team Members** 🤝
 
 * Maggie
 * Edison
@@ -18,12 +18,12 @@
 
 
   
-## Communication
+## Communication 🗣️
 * Channel: We will primarily use Slack for project-related discussions and updates.
 * Response Time: We aim to respond to team messages and requests within 24 hours.
 * Other: respect, active listening, constructive feedback, meeting follow-up.
 
-## Conflict Resolution
+## Conflict Resolution 🙊
 * We will address conflicts openly and respectfully.
 * If conflicts arise, we will first attempt to resolve them through team discussion.
 * If necessary, we will seek assistance from the course instructor or teaching assistant.
@@ -31,9 +31,9 @@
 
 
 
-## Division of Labour
+## Division of Labour ✅
 
-### Milestone 1
+### Milestone 1️⃣
 
 Tasks for Milestone 1 will be divided through team discussion on slack. Everyone will create an *independent branch* before working on their assigned task. 
 
@@ -59,7 +59,7 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 
 
 
-### Milestone 1 Timing:
+### Milestone 1 Timing: ⌛
 | **Date**  |       **Task**                      |
 |:--------- |:--------------------                |
 | Sept 14   | Create Group Repository             |
@@ -73,7 +73,7 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 
 
 
-### Milestone2 
+### Milestone 2️⃣
 
 ( Timing and Task Devision TBD)
 
