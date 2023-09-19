@@ -30,7 +30,7 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 * _**Exercise 8:**_ Submitting this Milestone: ?
 
 
-<**Table 1. Pull Requests**>
+**Table 1. Pull Requests**
 
 | **Submit**          | **Review and Merge**  |
 |:--------------------|:--------------------  |
@@ -45,6 +45,7 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 ### Timing:
 | **Date**  | **Task**                            |
 |:--------- |:--------------------                |
+| **Milestone 1                                   |
 | Sept 14   | Create Group Repository             |
 | Sept 17   | Complete GitHub Issues (Exercise 4) |
 | Sept 18   | Reply to GitHub Issues (Exercise 4) |
