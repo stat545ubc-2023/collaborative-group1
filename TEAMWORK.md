@@ -32,13 +32,13 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 
 ** Table 1. Pull Requests **
 
-| **submit**  | **review and merge**  |
-|:------------|:--------------------  |
-| Maggie      | Edison                |
-| Yuehao      | Jacky & Kiana         |
-| Kiana       | Edison & Keren        |
-| Keren       | Kiana & Maggie        |
-| Shengyu     | Edison                |
+| **submit**          | **review and merge**  |
+|:--------------------|:--------------------  |
+| Maggie              | Edison                |
+| Yuehao (Edison)     | Jacky & Kiana         |
+| Kiana               | Edison & Keren        |
+| Keren               | Kiana & Maggie        |
+| Shengyu (Jacky)     | Edison                |
 
 
 ** TO DO: Please indicate to the TAs which PRs you would like to be graded by adding “(GRADED)” to the PR name **
@@ -48,9 +48,9 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 | **Date**  | **Task**                            |
 |:--------- |:--------------------                |
 | Sept 14   | Create group repository             |
-| date x    | Complete GitHub issues (Exercise 4) |
-| date x    | Reply to GitHub issues (Exercise 4) |
-| date x    | Submit pull requests                |
+| Sept 17   | Complete GitHub issues (Exercise 4) |
+| Sept 18   | Reply to GitHub issues (Exercise 4) |
+| Sept 21   | Submit / merge pull requests        |
 | Sept 22   | Milestone 1 due                     |
 | date x    | Exercise 0: Merge one Pull Request per teammate|
 | date x    | Exercise 1: Troubleshooting document|
