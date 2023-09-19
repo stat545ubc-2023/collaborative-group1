@@ -25,14 +25,14 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 * _**Exercise 3:**_ Merge One Pull Request per Teammate: All Team Members (Additional details are presented in table 1) 
 * _**Exercise 4:**_ GitHub Issues: All Team Members
 * _**Exercise 5:**_ Teamwork Contract: All Team Members
-* _**Exercise 6:**_ Troubleshooting Document: All Team Members
+* _**Exercise 6:**_ Troubleshooting Document: Maggie, Keren & Kiana
 * _**Exercise 7:**_ README File: All Team Members
 * _**Exercise 8:**_ Submitting this Milestone: ?
 
 
-** Table 1. Pull Requests **
+<**Table 1. Pull Requests**>
 
-| **submit**          | **review and merge**  |
+| **Submit**          | **Review and Merge**  |
 |:--------------------|:--------------------  |
 | Maggie              | Edison                |
 | Yuehao (Edison)     | Jacky & Kiana         |
@@ -41,21 +41,21 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 | Shengyu (Jacky)     | Edison                |
 
 
-** TO DO: Please indicate to the TAs which PRs you would like to be graded by adding “(GRADED)” to the PR name **
-
 
 ### Timing:
 | **Date**  | **Task**                            |
 |:--------- |:--------------------                |
-| Sept 14   | Create group repository             |
-| Sept 17   | Complete GitHub issues (Exercise 4) |
-| Sept 18   | Reply to GitHub issues (Exercise 4) |
-| Sept 21   | Submit / merge pull requests        |
-| Sept 22   | Milestone 1 due                     |
+| Sept 14   | Create Group Repository             |
+| Sept 17   | Complete GitHub Issues (Exercise 4) |
+| Sept 18   | Reply to GitHub Issues (Exercise 4) |
+| Sept 19   | R Troubleshooting (Exercise 6)      |
+| Sept 21   | Submit / Merge Pull Requests        |
+| Sept 22   | Milestone 1 due (@5PM)                     |
 | date x    | Exercise 0: Merge one Pull Request per teammate|
 | date x    | Exercise 1: Troubleshooting document|
 | date x    | Exercise 2: README file and tidy submission|
 | Sept 29   | Milestone 2 due (Exercise 3: Submitting this Milestone)|
+
   
 ### Communication:
 * Channel: We will primarily use Slack for project-related discussions and updates.
