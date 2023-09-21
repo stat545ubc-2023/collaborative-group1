@@ -44,7 +44,7 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 * _**Exercise 5:**_ Teamwork Contract: All Team Members
 * _**Exercise 6:**_ Troubleshooting Document: Maggie, Keren & Kiana
 * _**Exercise 7:**_ README File: All Team Members
-* _**Exercise 8:**_ Submitting this Milestone: ?
+* _**Exercise 8:**_ Submitting this Milestone: Edison
 
 
 **Table 1. Pull Requests**
