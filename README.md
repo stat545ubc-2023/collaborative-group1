@@ -5,24 +5,30 @@
   style="float: right; margin-right: 80px;" width="500" /> 
 
 
-### **Project Team Members**
+## **Project Team Members**
 * Maggie
 * Edison
 * Kiana
 * Keren
 * Jacky
 
-### **Useful Links**
+## **Useful Links**
 * [Project Repository on GitHub](https://github.com/stat545ubc-2023/collaborative-group1)
 * [Assignment Instructions](https://stat545.stat.ubc.ca/collaborative-project/milestone1/)
 
-### **Project Description**
+## **Project Description**
 This collaborative project aims to develop students' skills in collaborating on a project using the Git and GitHub workflow. It also involves troubleshooting and rewriting code to meet project instructions. 
 
-### **Files in the Project**
+## **Files in the Project**
 
 1. **README.md:** This file (the README you are currently reading) provides an overview of the project, lists project files, and explains how to run the code.
 
 2. **TEAMWORK.md:** This document contains guidelines and agreements for teamwork, including the division of labour, timing of submissions, and communication methods.
 
-3. **troubleshooting-1.Rmd:** A document that needs troubleshooting. It will be corrected as part of this milestone. 
+3. **troubleshooting-1.Rmd:** An R markdown troubleshooting document with three errors that will need correction.
+4.  **troubleshooting-1.md:** This is the .md output of the troubleshooting document.
+
+## How to run codes in our folder/Github repository
+* Clone the code
+* Install the RStudio
+* Pull, make changes, commit, push/merge
