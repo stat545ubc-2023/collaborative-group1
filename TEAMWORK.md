@@ -80,6 +80,16 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 * _**Exercise 3:**_ Submitting this Milestone: Jacky
 
 
+**Table 2. Pull Requests**
+
+| **Submit**          | **Review and Merge**  |
+|:--------------------|:--------------------  |
+| Maggie              | Kiana                 |
+| Yuehao (Edison)     |                       |
+| Kiana               | Maggie                |
+| Keren               |                       |
+| Shengyu (Jacky)     |                       |
+
 
 
 | **Date**  |       **Task**                      |
