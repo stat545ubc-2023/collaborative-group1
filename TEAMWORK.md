@@ -75,14 +75,19 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 
 ### Milestone 2️⃣
 
-( Timing and Task Devision TBD)
+* _**Exercise 0:**_ Merge one Pull Request per teammate: All Team Members
+* _**Exercise 1:**_ Troubleshooting document: All Team Members
+* _**Exercise 3:**_ Submitting this Milestone: Jacky
+
+
+
 
 | **Date**  |       **Task**                      |
 |:--------- |:--------------------                |
-| date x    | Exercise 0: Merge one Pull Request per teammate|
-| date x    | Exercise 1: Troubleshooting document|
-| date x    | Exercise 2: README file and tidy submission|
-| Sept 29   | Milestone 2 due (Exercise 3: Submitting this Milestone)|
+| date 27   | Exercise 0: Merge one Pull Request per teammate|
+| date 26   | Exercise 1: Troubleshooting document|
+| date 27   | Exercise 2: README file and tidy submission|
+| Sept 29   | Exercise 3: Submitting this Milestone: Milestone 2 due|
 
 
 
