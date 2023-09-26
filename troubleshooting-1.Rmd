@@ -19,7 +19,6 @@ First, let's store the current date as a variable. We can use the function `Sys.
 today <- Sys.Date()
 #correction: variable names. 
 #In R, variable names should not start with an underscore.
-
 ```
 
 You may notice that, although an error might appear in these cells, this Rmd file knits just fine. That's because the `error = TRUE` *chunk option* is included in each chunk, allowing the Rmd file to knit, even when an error is encountered.
@@ -29,6 +28,7 @@ Now, let's load the `tidyverse` (meta-) package:
 ```{r, error = TRUE}
 ## ERROR 2 ##
 # changed line 30 
+
 library (tidyverse)
 #The error in this code snippet was because of a typo in the function name. It should be library (singular), not libraries (plural).
 ```
