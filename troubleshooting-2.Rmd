@@ -17,6 +17,7 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 
 ```{r}
 ### ERROR HERE ###
+
 #load.packages(dslabs)
 #load.packages(tidyverse)
 #load.packages(stringr)
@@ -33,18 +34,20 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 ### CORRECT CODE ###
 ##install.packages("dslabs")
   #note: I did not have the "dslabs" package; first, install the package! but don't keep this line in your code
+
 library(dslabs)
 library(dslabs)
 library(tidyverse)
 library(stringr)
+
 #install.packages("devtools") 
     # Do not run this if you already have this package installed! 
     #I had to run this code because I did not have the package
-library(devtools)
-devtools::install_github("JoeyBernhardt/singer")
-library(gapminder)
+
 
 ```
+
+
 
 Let's have a look at the dataset! My goal is to:
 
@@ -54,19 +57,21 @@ Let's have a look at the dataset! My goal is to:
 
 ```{r}
 ### ERROR HERE ###
+
 #class(dslabs::movielens)
 #movieLens <- as_tibble(dslabs::movielens)
 #dim(movieLens)
 
 ###ASSIGNED TO: Keren
 
-### ISSUE: 
+### ISSUE: as_tibble function is not available in the dslabs package. To convert the dataset to a tibble, we can use the as_tibble function from the tibble package, which is part of the tidyverse. Therefore, we need to call the "tibble" library. 
 
 ### SOLUTION: 
 
 ### CORRECT CODE ###
-#as_tibble function is not available in the dslabs package. To convert the dataset to a tibble, we can use the as_tibble function from the tibble package, which is part of the tidyverse. Therefore, we need to call the "tibble" library. 
+
 library(tibble)
+
 class(dslabs::movielens)
 movieLens <- as_tibble(dslabs::movielens)
 dim(movieLens)
@@ -74,7 +79,6 @@ dim(movieLens)
 #look at the tibble
 head(movieLens)
 
-```
 
 Now that we've had a quick look at the dataset, it would be interesting to explore the rows (observations) in some more detail. I'd like to consider the movie entries that...
 
@@ -86,6 +90,7 @@ Now that we've had a quick look at the dataset, it would be interesting to explo
 
 ```{r}
 ### ERROR HERE ###
+
 #filter(movieLens, genres == "Drama") 
 #filter(movieLens, !genres == "Drama") 
 #filter(movieLens, year >= 2000)
@@ -112,12 +117,14 @@ filter(movieLens, year %in% c(1999, 2000))
 #have *more than* 4.5 stars, and were filmed *before* 1995 [original code was correct]
 filter(movieLens, rating > 4.5, year < 1995) 
 
-```
+
+
 
 While filtering for *all movies that do not belong to the genre drama* above, I noticed something interesting. I want to filter for the same thing again, this time selecting variables **title and genres first,** and then *everything else*. But I want to do this in a robust way, so that (for example) if I end up changing `movieLens` to contain more or less columns some time in the future, the code will still work. Hint: there is a function to select "everything else"...
 
 ```{r}
 ### ERROR HERE ###
+
 #movieLens %>%
 #  filter(!genres == "Drama") %>%
 #  select(title, genres, year, rating, timestamp)
@@ -133,7 +140,7 @@ movieLens %>%
   filter(!genres == "Drama") %>%
   select(title, genres, everything()) #is this right? even if I change the dataset? SOMEONE DOUBLE CHECK!!
 
-```
+
 
 ## Exercise 2: Calculating with `mutate()`-like functions
 
@@ -147,14 +154,14 @@ Some of the variables in the `movieLens` dataset are in *camelCase* (in fact, *m
 
 ###ASSIGNED TO: Keren
 
-### ISSUE: 
+### ISSUE: #The error is due to the incorrect syntax in the rename function. We are using the == operator, which is not valid for renaming columns.
 
 ### SOLUTION: 
 
 ### CORRECT CODE ###
 movieLens <- movieLens %>%
   rename(user_id = userId,
-         movie_id = movieId) 
+  movie_id = movieId) 
 
 ```
 
@@ -162,6 +169,7 @@ As you already know, `mutate()` defines and inserts new variables into a tibble.
 
 ```{r}
 ### ERROR HERE ### 
+
 #mutate(movieLens,
 #       average_rating = mean(rating))
 
@@ -175,7 +183,7 @@ As you already know, `mutate()` defines and inserts new variables into a tibble.
 transmute(movieLens,
        average_rating = mean(rating))
 
-```
+
 
 ## Exercise 3: Calculating with `summarise()`-like functions
 
@@ -200,15 +208,16 @@ Without using `group_by()`, I want to find out how many movie reviews there have
 
 ###ASSIGNED TO: Keren
 
-### ISSUE: 
+### ISSUE: To find out how many movie reviews there have been for each year without using group_by(), we can directly use count() on the "year" column.
 
 ### SOLUTION: 
 
 ### CORRECT CODE ###
 movieLens %>%
+
   count(year)
 
-```
+
 
 Both `count()` and `tally()` can be grouped by multiple columns. Below, I want to count the number of movie reviews by title and rating, and sort the results.
 
@@ -219,13 +228,15 @@ Both `count()` and `tally()` can be grouped by multiple columns. Below, I want t
 
 ###ASSIGNED TO: Jacky
 
-### ISSUE: 
+### ISSUE: The error in  code is due to the incorrect use of count(). When we want to count by multiple columns and sort the results, we should pass those columns as separate arguments to the count() function, not as a single vector. 
+
 
 ### SOLUTION: 
 
 ### CORRECT CODE ###
 movieLens %>%
   count(title, rating, sort = TRUE)
+
 
 ```
 
@@ -241,7 +252,7 @@ movieLens %>%
   summarize(avg_rating = mean(rating))
 
 #no error in this code!
-```
+
 
 Using `summarize()`, we can find the minimum and the maximum rating by title, stored under columns named `min_rating`, and `max_rating`, respectively.
 
@@ -253,16 +264,18 @@ Using `summarize()`, we can find the minimum and the maximum rating by title, st
 
 ###ASSIGNED TO: Jacky
 
-### ISSUE: 
+### ISSUE: we need to use the summarize function
 
 ### SOLUTION: 
 
 ### CORRECT CODE ###
 movieLens %>%
+
   summarize(min_rating = min(rating), 
          max_rating = max(rating))
 
-```
+
+
 
 ## Exercise 5: Scoped variants with `across()`
 
@@ -270,8 +283,8 @@ movieLens %>%
 
 ```{r}
 starWars <- as_tibble(starwars)
-
 #this code is correct!
+
 
 ```
 
@@ -280,16 +293,18 @@ We can find the mean for all columns that are numeric, ignoring the missing valu
 ```{r}
 starWars %>%
   summarise(across(where(is.numeric), function(x) mean(x, na.rm=TRUE)))
-
-#this code is correct!
+ #this code is correct!
 
 ```
 
 We can find the minimum height and mass within each species, ignoring the missing values: 
 
+
+
 ```{r}
 ### ERROR HERE ###
 #starWars %>%
+
 #  group_by(species) %>%
 #  summarise(across("height", "mass", function(x) min(x, na.rm=TRUE)))
 
@@ -301,11 +316,15 @@ We can find the minimum height and mass within each species, ignoring the missin
 ### SOLUTION: 
 
 ### CORRECT CODE ###
-starWars %>%
-  group_by(species) %>%
-  summarise(across(c("height", "mass"), ~min(., na.rm = TRUE), .names = "min_{.col}"))
 
-```
+  #group_by(species) %>%
+  #summarise(across("height", "mass", function(x) min(x, na.rm=TRUE)))
+
+
+
+
+
+
 
 Note that here R has taken the convention that the minimum value of a set of `NA`s is `Inf`.
 
@@ -319,6 +338,7 @@ Manually create a tibble with 4 columns:
 
 ```{r}
 ### ERROR HERE ###
+
 #fakeStarWars <- tribble(
 #  ~name,            ~birth_weight,  ~birth_year, ~birth_location
 #  "Luke Skywalker",  1.35      ,   1998        ,  Liverpool, England,
@@ -350,6 +370,7 @@ fakeStarWars <- tribble(
   "Beru Whitesun Iars", 2004, (2004 - 1995) * 0.45, "Liverpool, England",
   "R5-D4",          2005, (2005 - 1995) * 0.45, "New York, NY"
 )
+
 
 ```
 

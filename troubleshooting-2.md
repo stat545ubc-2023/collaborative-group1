@@ -25,6 +25,7 @@ required packages.
 
 ``` r
 ### ERROR HERE ###
+
 #load.packages(dslabs)
 #load.packages(tidyverse)
 #load.packages(stringr)
@@ -41,17 +42,20 @@ required packages.
 ### CORRECT CODE ###
 ##install.packages("dslabs")
   #note: I did not have the "dslabs" package; first, install the package! but don't keep this line in your code
+
 library(dslabs)
 library(dslabs)
 library(tidyverse)
 ```
 
     ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+
     ## ✔ dplyr     1.1.2     ✔ readr     2.1.4
     ## ✔ forcats   1.0.0     ✔ stringr   1.5.0
     ## ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
     ## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
     ## ✔ purrr     1.0.1     
+
     ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
     ## ✖ dplyr::filter() masks stats::filter()
     ## ✖ dplyr::lag()    masks stats::lag()
@@ -59,10 +63,11 @@ library(tidyverse)
 
 ``` r
 library(stringr)
+
 #install.packages("devtools") 
     # Do not run this if you already have this package installed! 
     #I had to run this code because I did not have the package
-library(devtools)
+
 ```
 
     ## Loading required package: usethis
@@ -94,6 +99,7 @@ Let’s have a look at the dataset! My goal is to:
 
 ``` r
 ### ERROR HERE ###
+
 #class(dslabs::movielens)
 #movieLens <- as_tibble(dslabs::movielens)
 #dim(movieLens)
@@ -107,6 +113,7 @@ Let’s have a look at the dataset! My goal is to:
 ### CORRECT CODE ###
 #as_tibble function is not available in the dslabs package. To convert the dataset to a tibble, we can use the as_tibble function from the tibble package, which is part of the tidyverse. Therefore, we need to call the "tibble" library. 
 library(tibble)
+
 class(dslabs::movielens)
 ```
 
@@ -146,6 +153,7 @@ consider the movie entries that…
 
 ``` r
 ### ERROR HERE ###
+
 #filter(movieLens, genres == "Drama") 
 #filter(movieLens, !genres == "Drama") 
 #filter(movieLens, year >= 2000)
@@ -163,7 +171,7 @@ consider the movie entries that…
 ### CORRECT CODE ###
 #belong *exclusively* to the genre *"Drama"* [original code was correct]
 filter(movieLens, genres == "Drama") 
-```
+
 
     ## # A tibble: 7,757 × 7
     ##    movieId title                             year genres userId rating timestamp
@@ -181,8 +189,10 @@ filter(movieLens, genres == "Drama")
     ## # ℹ 7,747 more rows
 
 ``` r
+
 #don't belong *exclusively* to the genre *"Drama"* [original code was correct]
 filter(movieLens, !genres == "Drama") 
+
 ```
 
     ## # A tibble: 92,247 × 7
@@ -201,8 +211,10 @@ filter(movieLens, !genres == "Drama")
     ## # ℹ 92,237 more rows
 
 ``` r
+
 #were filmed *after* the year 2000 [original code was INCORRECT]
 filter(movieLens, year > 2000) 
+
 ```
 
     ## # A tibble: 25,481 × 7
@@ -221,7 +233,9 @@ filter(movieLens, year > 2000)
     ## # ℹ 25,471 more rows
 
 ``` r
+
 #were filmed in 1999 *or* 2000 [original code was INCORRECT]
+
 filter(movieLens, year %in% c(1999, 2000))
 ```
 
@@ -241,9 +255,10 @@ filter(movieLens, year %in% c(1999, 2000))
     ## # ℹ 9,078 more rows
 
 ``` r
+
 #have *more than* 4.5 stars, and were filmed *before* 1995 [original code was correct]
 filter(movieLens, rating > 4.5, year < 1995) 
-```
+
 
     ## # A tibble: 8,386 × 7
     ##    movieId title                             year genres userId rating timestamp
@@ -270,6 +285,7 @@ there is a function to select “everything else”…
 
 ``` r
 ### ERROR HERE ###
+
 #movieLens %>%
 #  filter(!genres == "Drama") %>%
 #  select(title, genres, year, rating, timestamp)
@@ -284,6 +300,7 @@ there is a function to select “everything else”…
 movieLens %>%
   filter(!genres == "Drama") %>%
   select(title, genres, everything()) #is this right? even if I change the dataset? SOMEONE DOUBLE CHECK!!
+
 ```
 
     ## # A tibble: 92,247 × 7
@@ -310,6 +327,7 @@ use *snake_case* instead, and assign our post-rename object back to
 
 ``` r
 ### ERROR HERE ###
+
 #movieLens <- movieLens %>%
 #  rename(user_id == userId,
 #         movie_id == movieId)
@@ -324,7 +342,7 @@ use *snake_case* instead, and assign our post-rename object back to
 movieLens <- movieLens %>%
   rename(user_id = userId,
          movie_id = movieId) 
-```
+
 
 As you already know, `mutate()` defines and inserts new variables into a
 tibble. There is *another mystery function similar to `mutate()`* that
@@ -335,6 +353,7 @@ I forgot what that mystery function is. Can you remember?
 
 ``` r
 ### ERROR HERE ### 
+
 #mutate(movieLens,
 #       average_rating = mean(rating))
 
@@ -345,6 +364,7 @@ I forgot what that mystery function is. Can you remember?
 ### SOLUTION: Change mutate to transmute.
 
 ### CORRECT CODE ###
+
 transmute(movieLens,
        average_rating = mean(rating))
 ```
@@ -363,6 +383,13 @@ transmute(movieLens,
     ##  9           3.54
     ## 10           3.54
     ## # ℹ 99,994 more rows
+
+
+=======
+``` r
+#The function is called transmute() in R. transmute() is similar to mutate(), but it creates new variables and drops all existing ones except for the ones you explicitly specify. We needed to change mutate with transmute. 
+```
+
 
 ## Exercise 3: Calculating with `summarise()`-like functions
 
@@ -405,6 +432,7 @@ there have been for each year.
 
 ``` r
 ### ERROR HERE ###
+
 #movieLens %>%
 #  tally(year)
 
@@ -417,6 +445,7 @@ there have been for each year.
 ### CORRECT CODE ###
 movieLens %>%
   count(year)
+
 ```
 
     ## # A tibble: 104 × 2
@@ -434,12 +463,20 @@ movieLens %>%
     ## 10  1923     3
     ## # ℹ 94 more rows
 
+
+=======
+``` r
+#To find out how many movie reviews there have been for each year without using group_by(), you can directly use count() on the "year" column.
+```
+
+
 Both `count()` and `tally()` can be grouped by multiple columns. Below,
 I want to count the number of movie reviews by title and rating, and
 sort the results.
 
 ``` r
 ### ERROR HERE ###
+
 #movieLens %>%
 #  count(c(title, rating), sort = TRUE)
 
@@ -450,6 +487,7 @@ sort the results.
 ### SOLUTION: 
 
 ### CORRECT CODE ###
+
 movieLens %>%
   count(title, rating, sort = TRUE)
 ```
@@ -468,6 +506,13 @@ movieLens %>%
     ##  9 Fargo                                   5   100
     ## 10 Silence of the Lambs, The               5   100
     ## # ℹ 28,287 more rows
+
+
+=======
+``` r
+#The error in  code is due to the incorrect use of count(). When we want to count by multiple columns and sort the results, we should pass those columns as separate arguments to the count() function, not as a single vector. 
+```
+
 
 Not only do `count()` and `tally()` quickly allow you to count items
 within your dataset, `add_tally()` and `add_count()` are handy shortcuts
@@ -510,6 +555,7 @@ respectively.
 
 ``` r
 ### ERROR HERE ###
+
 #movieLens %>%
 #  mutate(min_rating = min(rating), 
 #         max_rating = max(rating))
@@ -523,6 +569,7 @@ respectively.
 ### CORRECT CODE ###
 movieLens %>%
   summarize(min_rating = min(rating), 
+
          max_rating = max(rating))
 ```
 
@@ -530,6 +577,13 @@ movieLens %>%
     ##   min_rating max_rating
     ##        <dbl>      <dbl>
     ## 1        0.5          5
+
+
+=======
+``` r
+#we need to use the summarize function
+```
+
 
 ## Exercise 5: Scoped variants with `across()`
 
@@ -541,6 +595,9 @@ into a tibble and store it under the variable `starWars`.
 
 ``` r
 starWars <- as_tibble(starwars)
+
+
+=======
 
 #this code is correct!
 ```
@@ -568,6 +625,7 @@ the missing values:
 ``` r
 ### ERROR HERE ###
 #starWars %>%
+
 #  group_by(species) %>%
 #  summarise(across("height", "mass", function(x) min(x, na.rm=TRUE)))
 
@@ -579,6 +637,7 @@ the missing values:
 ### SOLUTION: 
 
 ### CORRECT CODE ###
+
 starWars %>%
   group_by(species) %>%
   summarise(across(c("height", "mass"), ~min(., na.rm = TRUE), .names = "min_{.col}"))
@@ -623,6 +682,7 @@ Manually create a tibble with 4 columns:
 
 ``` r
 ### ERROR HERE ###
+
 #fakeStarWars <- tribble(
 #  ~name,            ~birth_weight,  ~birth_year, ~birth_location
 #  "Luke Skywalker",  1.35      ,   1998        ,  Liverpool, England,
@@ -643,6 +703,7 @@ Manually create a tibble with 4 columns:
 ### SOLUTION: You should use double quotes to enclose location names that contain spaces. 
 
 ### CORRECT CODE ###
+
 fakeStarWars <- tribble(
   ~name,           ~birth_year, ~birth_weight, ~birth_location,
   "Luke Skywalker", 1998, (1998 - 1995) * 0.45, "Liverpool, England",
