@@ -26,23 +26,36 @@ required packages.
 ``` r
 ### ERROR HERE ###
 
-#The issue in this code is the incorrect usage of the load.packages function. This function is not a standard function in R, and it's not used to load packages. Instead, we should use the library function to load packages in R.
+#load.packages(dslabs)
+#load.packages(tidyverse)
+#load.packages(stringr)
+#install.packages("devtools") # Do not run this if you already have this package installed! 
+#devtools::install_github("JoeyBernhardt/singer")
+#load.packages(gapminder)
 
-#Replace load.packages() with the library() function.
+###ASSIGNED TO: Maggie
 
-#I did not have the "dslabs" package; first, install the package!
-#install.packages("dslabs")
+### ISSUE: incorrect usage of the load.packages function. This function is not a standard function in R, and it's not used to load packages. Instead, we should use the library function to load packages in R.
+
+### SOLUTION: Replace load.packages() with the library() function.
+
+### CORRECT CODE ###
+##install.packages("dslabs")
+  #note: I did not have the "dslabs" package; first, install the package! but don't keep this line in your code
+
 library(dslabs)
 library(dslabs)
 library(tidyverse)
 ```
 
     ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-    ## ✔ dplyr     1.1.3     ✔ readr     2.1.4
+
+    ## ✔ dplyr     1.1.2     ✔ readr     2.1.4
     ## ✔ forcats   1.0.0     ✔ stringr   1.5.0
-    ## ✔ ggplot2   3.4.3     ✔ tibble    3.2.1
+    ## ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
     ## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-    ## ✔ purrr     1.0.2     
+    ## ✔ purrr     1.0.1     
+
     ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
     ## ✖ dplyr::filter() masks stats::filter()
     ## ✖ dplyr::lag()    masks stats::lag()
@@ -50,8 +63,11 @@ library(tidyverse)
 
 ``` r
 library(stringr)
-#install.packages("devtools") # Do not run this if you already have this package installed! #I had to run this code because I did not have the package
-library(devtools)
+
+#install.packages("devtools") 
+    # Do not run this if you already have this package installed! 
+    #I had to run this code because I did not have the package
+
 ```
 
     ## Loading required package: usethis
@@ -83,8 +99,19 @@ Let’s have a look at the dataset! My goal is to:
 
 ``` r
 ### ERROR HERE ###
-#as_tibble function is not available in the dslabs package. To convert the dataset to a tibble, we can use the as_tibble function from the tibble package, which is part of the tidyverse. Therefore, we need to call the "tibble" library. 
 
+#class(dslabs::movielens)
+#movieLens <- as_tibble(dslabs::movielens)
+#dim(movieLens)
+
+###ASSIGNED TO: Keren
+
+### ISSUE: 
+
+### SOLUTION: 
+
+### CORRECT CODE ###
+#as_tibble function is not available in the dslabs package. To convert the dataset to a tibble, we can use the as_tibble function from the tibble package, which is part of the tidyverse. Therefore, we need to call the "tibble" library. 
 library(tibble)
 
 class(dslabs::movielens)
@@ -127,9 +154,24 @@ consider the movie entries that…
 ``` r
 ### ERROR HERE ###
 
-#belong *exclusively* to the genre *"Drama"*;
-filter(movieLens, genres == "Drama")
-```
+#filter(movieLens, genres == "Drama") 
+#filter(movieLens, !genres == "Drama") 
+#filter(movieLens, year >= 2000)
+#filter(movieLens, year == 1999 | month == 2000) 
+#filter(movieLens, rating > 4.5, year < 1995)
+
+###ASSIGNED TO: Maggie
+
+### ISSUE: 
+# (1) The third line of code above looking for movies filmed *after* the year 2000 is incorrect as it currently filters movie entries in 2000 or after (>=), not just after 2000 (>). 
+# (2) The fourth line of code above looking for movies filmed in 1999 *or* 2000 is incorrect because when you run the code it indicates the object "month" is not found; we should be using the c() function instead. 
+
+### SOLUTION: For issue (1), change >= into > in third line of code. For issue (2), use the following: "year %in% c(1999, 2000)" to look for movies that were filmed in 1999 OR 2000.
+
+### CORRECT CODE ###
+#belong *exclusively* to the genre *"Drama"* [original code was correct]
+filter(movieLens, genres == "Drama") 
+
 
     ## # A tibble: 7,757 × 7
     ##    movieId title                             year genres userId rating timestamp
@@ -147,8 +189,10 @@ filter(movieLens, genres == "Drama")
     ## # ℹ 7,747 more rows
 
 ``` r
-#don't belong *exclusively* to the genre *"Drama"*;
-filter(movieLens, !genres == "Drama")
+
+#don't belong *exclusively* to the genre *"Drama"* [original code was correct]
+filter(movieLens, !genres == "Drama") 
+
 ```
 
     ## # A tibble: 92,247 × 7
@@ -167,9 +211,10 @@ filter(movieLens, !genres == "Drama")
     ## # ℹ 92,237 more rows
 
 ``` r
-#were filmed *after* the year 2000; We should change the >= sign to > because we are considering movie entries after 2000 and not in or after 2000. 
 
-filter(movieLens, year > 2000)
+#were filmed *after* the year 2000 [original code was INCORRECT]
+filter(movieLens, year > 2000) 
+
 ```
 
     ## # A tibble: 25,481 × 7
@@ -188,10 +233,8 @@ filter(movieLens, year > 2000)
     ## # ℹ 25,471 more rows
 
 ``` r
-# were filmed in 1999 *or* 2000;
-#filter(movieLens, year == 1999 | month == 2000) #when you run the code the error occurs for this line indicating that the object 'month' was not found.
 
-#corrected code: 
+#were filmed in 1999 *or* 2000 [original code was INCORRECT]
 
 filter(movieLens, year %in% c(1999, 2000))
 ```
@@ -212,10 +255,10 @@ filter(movieLens, year %in% c(1999, 2000))
     ## # ℹ 9,078 more rows
 
 ``` r
-#have *more than* 4.5 stars, and were filmed *before* 1995.
 
-filter(movieLens, rating > 4.5, year < 1995)
-```
+#have *more than* 4.5 stars, and were filmed *before* 1995 [original code was correct]
+filter(movieLens, rating > 4.5, year < 1995) 
+
 
     ## # A tibble: 8,386 × 7
     ##    movieId title                             year genres userId rating timestamp
@@ -242,11 +285,22 @@ there is a function to select “everything else”…
 
 ``` r
 ### ERROR HERE ###
-#when you first run the code, it runs without errors
 
+#movieLens %>%
+#  filter(!genres == "Drama") %>%
+#  select(title, genres, year, rating, timestamp)
+
+###ASSIGNED TO: Edison
+
+### ISSUE: 
+
+### SOLUTION: 
+
+### CORRECT CODE ###
 movieLens %>%
   filter(!genres == "Drama") %>%
-  select(title, genres, everything()) #is this right? even if I change the dataset?
+  select(title, genres, everything()) #is this right? even if I change the dataset? SOMEONE DOUBLE CHECK!!
+
 ```
 
     ## # A tibble: 92,247 × 7
@@ -273,13 +327,22 @@ use *snake_case* instead, and assign our post-rename object back to
 
 ``` r
 ### ERROR HERE ###
+
+#movieLens <- movieLens %>%
+#  rename(user_id == userId,
+#         movie_id == movieId)
+
+###ASSIGNED TO: Keren
+
+### ISSUE: 
+
+### SOLUTION: 
+
+### CORRECT CODE ###
 movieLens <- movieLens %>%
   rename(user_id = userId,
-         movie_id = movieId)
+         movie_id = movieId) 
 
-
-#The error in your code is due to the incorrect syntax in the rename function. We are using the == operator, which is not valid for renaming columns.
-```
 
 As you already know, `mutate()` defines and inserts new variables into a
 tibble. There is *another mystery function similar to `mutate()`* that
@@ -290,6 +353,18 @@ I forgot what that mystery function is. Can you remember?
 
 ``` r
 ### ERROR HERE ### 
+
+#mutate(movieLens,
+#       average_rating = mean(rating))
+
+###ASSIGNED TO: Keren 
+
+### ISSUE: The function is called transmute() in R. transmute() is similar to mutate(), but it creates new variables and drops all existing ones except for the ones you explicitly specify. 
+
+### SOLUTION: Change mutate to transmute.
+
+### CORRECT CODE ###
+
 transmute(movieLens,
        average_rating = mean(rating))
 ```
@@ -309,9 +384,12 @@ transmute(movieLens,
     ## 10           3.54
     ## # ℹ 99,994 more rows
 
+
+=======
 ``` r
 #The function is called transmute() in R. transmute() is similar to mutate(), but it creates new variables and drops all existing ones except for the ones you explicitly specify. We needed to change mutate with transmute. 
 ```
+
 
 ## Exercise 3: Calculating with `summarise()`-like functions
 
@@ -354,8 +432,20 @@ there have been for each year.
 
 ``` r
 ### ERROR HERE ###
+
+#movieLens %>%
+#  tally(year)
+
+###ASSIGNED TO: Keren
+
+### ISSUE: 
+
+### SOLUTION: 
+
+### CORRECT CODE ###
 movieLens %>%
- count(year)
+  count(year)
+
 ```
 
     ## # A tibble: 104 × 2
@@ -373,9 +463,12 @@ movieLens %>%
     ## 10  1923     3
     ## # ℹ 94 more rows
 
+
+=======
 ``` r
 #To find out how many movie reviews there have been for each year without using group_by(), you can directly use count() on the "year" column.
 ```
+
 
 Both `count()` and `tally()` can be grouped by multiple columns. Below,
 I want to count the number of movie reviews by title and rating, and
@@ -383,6 +476,18 @@ sort the results.
 
 ``` r
 ### ERROR HERE ###
+
+#movieLens %>%
+#  count(c(title, rating), sort = TRUE)
+
+###ASSIGNED TO: Jacky
+
+### ISSUE: 
+
+### SOLUTION: 
+
+### CORRECT CODE ###
+
 movieLens %>%
   count(title, rating, sort = TRUE)
 ```
@@ -402,9 +507,12 @@ movieLens %>%
     ## 10 Silence of the Lambs, The               5   100
     ## # ℹ 28,287 more rows
 
+
+=======
 ``` r
 #The error in  code is due to the incorrect use of count(). When we want to count by multiple columns and sort the results, we should pass those columns as separate arguments to the count() function, not as a single vector. 
 ```
+
 
 Not only do `count()` and `tally()` quickly allow you to count items
 within your dataset, `add_tally()` and `add_count()` are handy shortcuts
@@ -447,8 +555,21 @@ respectively.
 
 ``` r
 ### ERROR HERE ###
+
+#movieLens %>%
+#  mutate(min_rating = min(rating), 
+#         max_rating = max(rating))
+
+###ASSIGNED TO: Jacky
+
+### ISSUE: 
+
+### SOLUTION: 
+
+### CORRECT CODE ###
 movieLens %>%
-  summarize (min_rating = min(rating), 
+  summarize(min_rating = min(rating), 
+
          max_rating = max(rating))
 ```
 
@@ -457,9 +578,12 @@ movieLens %>%
     ##        <dbl>      <dbl>
     ## 1        0.5          5
 
+
+=======
 ``` r
 #we need to use the summarize function
 ```
+
 
 ## Exercise 5: Scoped variants with `across()`
 
@@ -471,6 +595,10 @@ into a tibble and store it under the variable `starWars`.
 
 ``` r
 starWars <- as_tibble(starwars)
+
+
+=======
+
 #this code is correct!
 ```
 
@@ -497,10 +625,18 @@ the missing values:
 ``` r
 ### ERROR HERE ###
 #starWars %>%
-  #group_by(species) %>%
-  #summarise(across("height", "mass", function(x) min(x, na.rm=TRUE)))
 
-#The error in this code is due to the incorrect use of across(). When we want to apply a function to multiple columns, we should provide a selection specification, which can be a range of columns or column names. In the above code, we're trying to use "height" and "mass" as arguments to across(), which is not the correct way to specify multiple columns.
+#  group_by(species) %>%
+#  summarise(across("height", "mass", function(x) min(x, na.rm=TRUE)))
+
+
+###ASSIGNED TO: Edison
+
+### ISSUE: The error in this code is due to the incorrect use of across(). When we want to apply a function to multiple columns, we should provide a selection specification, which can be a range of columns or column names. In the above code, we're trying to use "height" and "mass" as arguments to across(), which is not the correct way to specify multiple columns.
+
+### SOLUTION: 
+
+### CORRECT CODE ###
 
 starWars %>%
   group_by(species) %>%
@@ -547,9 +683,26 @@ Manually create a tibble with 4 columns:
 ``` r
 ### ERROR HERE ###
 
-#There is a syntax error in your code when specifying the birth_location column. You should use double quotes to enclose location names that contain spaces. 
+#fakeStarWars <- tribble(
+#  ~name,            ~birth_weight,  ~birth_year, ~birth_location
+#  "Luke Skywalker",  1.35      ,   1998        ,  Liverpool, England,
+#  "C-3PO"         ,  1.80      ,   1999        ,  Liverpool, England,
+#  "R2-D2"         ,  2.25      ,   2000        ,  Seattle, WA,
+#  "Darth Vader"   ,  2.70      ,   2001        ,  Liverpool, England,
+#  "Leia Organa"   ,  3.15      ,   2002        ,  New York, NY,
+#  "Owen Lars"     ,  3.60      ,   2003        ,  Seattle, WA,
+#  "Beru Whitesun Iars", 4.05   ,   2004        ,  Liverpool, England,
+#  "R5-D4"         ,  4.50      ,   2005        ,  New York, NY,
+#)
 
-#corrected code: 
+
+###ASSIGNED TO: Kiana
+
+### ISSUE: There is a syntax error in your code when specifying the birth_location column. 
+
+### SOLUTION: You should use double quotes to enclose location names that contain spaces. 
+
+### CORRECT CODE ###
 
 fakeStarWars <- tribble(
   ~name,           ~birth_year, ~birth_weight, ~birth_location,
