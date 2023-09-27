@@ -82,11 +82,9 @@ library(gapminder)
     ##     gapminder
 
 ``` r
-devtools::install_github("JoeyBernhardt/singer")
+# If you already installed singer, please ignore this. If not, run the code below
+#devtools::install_github("JoeyBernhardt/singer")
 ```
-
-    ## Skipping install of 'singer' from a github remote, the SHA1 (2b4fe9cb) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
 
 Let’s have a look at the dataset! My goal is to:
 
@@ -311,6 +309,10 @@ movieLens %>%
     ## 10 French Connection, The          Action…    1953  1971      1    4      1.26e9
     ## # ℹ 92,237 more rows
 
+``` r
+#It is right.If you change the dataset, it's sure that we still have title and genres, everything() can make sure we have all others.   
+```
+
 ## Exercise 2: Calculating with `mutate()`-like functions
 
 Some of the variables in the `movieLens` dataset are in *camelCase* (in
@@ -331,9 +333,11 @@ use *snake_case* instead, and assign our post-rename object back to
 ### SOLUTION: correct the equal operation sign 
 
 ### CORRECT CODE ###
+#names(movieLens)
+#If you run this code more than once, you will get errors for the colname has already been changed
 movieLens <- movieLens %>%
   rename(user_id = userId,
-  movie_id = movieId) 
+        movie_id = movieId) 
 ```
 
 As you already know, `mutate()` defines and inserts new variables into a
@@ -460,7 +464,7 @@ sort the results.
 ### ISSUE: The error in  code is due to the incorrect use of count(). When we want to count by multiple columns and sort the results, we should pass those columns as separate arguments to the count() function, not as a single vector. 
 
 
-### SOLUTION: Count columns as separate arguments
+### SOLUTION: Count columns as separate arguments as count(cols, ...)
 
 ### CORRECT CODE ###
 movieLens %>%
@@ -529,15 +533,15 @@ respectively.
 
 ###ASSIGNED TO: Jacky
 
-### ISSUE: we need to use the summarize function instead of the mutate function
+### ISSUE: The minimum and the maximum rating aren't 'group_by' the title
 
-### SOLUTION: 
+### SOLUTION: we need to use the 'group_by' and 'summarize' function to find the minimum and the maximum rating 'by title'. 
+### Otherwise if we want to append the two columns to the original tibble we can replace 'summarize' with 'mutate'
 
 ### CORRECT CODE ###
 movieLens %>%
 group_by(title) %>%
-
-  summarize(min_rating = min(rating), 
+summarize(min_rating = min(rating), 
          max_rating = max(rating))
 ```
 
