@@ -1,5 +1,5 @@
 
-# STAT 545A Collaborative Project: *Milestone 1*
+# STAT 545A Collaborative Project: *Milestone 1 and 2*
 ***
 <img src="https://www.thescea.org/sites/scea/files/styles/1920wide/public/syndicated/images/student_collaboration.jpeg?itok=a-D1guBW" 
   style="float: right; margin-right: 80px;" width="500" /> 
@@ -17,7 +17,7 @@
 * [Assignment Instructions](https://stat545.stat.ubc.ca/collaborative-project/milestone1/)
 
 ## **Project Description**
-This collaborative project aims to develop students' skills in collaborating on a project using the Git and GitHub workflow. It also involves troubleshooting and rewriting code to meet project instructions. 
+This collaborative project aims to develop students' skills in collaborating on a project using the Git and GitHub workflow. It also involves troubleshooting and rewriting code to meet project instructions. There are two milestones that we will work on as a team.
 
 ## **Files in the Project**
 
@@ -27,7 +27,7 @@ This collaborative project aims to develop students' skills in collaborating on 
 
 3.  **troubleshooting-1.Rmd:** An R markdown troubleshooting document for milestone 1 with three errors that needs correction.
 4.  **troubleshooting-1.md:** This is the .md output of the troubleshooting document for milestone 1.
-5.  **troubleshooting-2.Rmd:** An R markdown troubleshooting document for milestone 2 that needs correction.
+5.  **troubleshooting-2.Rmd:** An R markdown troubleshooting document for milestone 2 that needs correction and it includes six exercises. 
 6.  **troubleshooting-2.md:** This is the .md output of the troubleshooting document for for milestone 2.
 
 ## How to run codes in our folder/Github repository
