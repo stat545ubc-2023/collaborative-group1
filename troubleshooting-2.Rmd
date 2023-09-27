@@ -242,7 +242,7 @@ Both `count()` and `tally()` can be grouped by multiple columns. Below, I want t
 ### ISSUE: The error in  code is due to the incorrect use of count(). When we want to count by multiple columns and sort the results, we should pass those columns as separate arguments to the count() function, not as a single vector. 
 
 
-### SOLUTION: Count columns as separate arguments
+### SOLUTION: Count columns as separate arguments as count(cols, ...)
 
 ### CORRECT CODE ###
 movieLens %>%
@@ -274,15 +274,15 @@ Using `summarize()`, we can find the minimum and the maximum rating by title, st
 
 ###ASSIGNED TO: Jacky
 
-### ISSUE: we need to use the summarize function instead of the mutate function
+### ISSUE: The minimum and the maximum rating aren't 'group_by' the title
 
-### SOLUTION: 
+### SOLUTION: we need to use the 'group_by' and 'summarize' function to find the minimum and the maximum rating 'by title'. 
+### Otherwise if we want to append the two columns to the original tibble we can replace 'summarize' with 'mutate'
 
 ### CORRECT CODE ###
 movieLens %>%
 group_by(title) %>%
-
-  summarize(min_rating = min(rating), 
+summarize(min_rating = min(rating), 
          max_rating = max(rating))
 
 
