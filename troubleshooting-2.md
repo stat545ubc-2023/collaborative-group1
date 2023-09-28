@@ -108,7 +108,7 @@ Let’s have a look at the dataset! My goal is to:
 
 ### CORRECT CODE ###
 
-library(tibble)
+library(tibble) #call the 'tibble' library here
 
 class(dslabs::movielens)
 ```
@@ -330,7 +330,7 @@ use *snake_case* instead, and assign our post-rename object back to
 
 ### ISSUE: #The error is due to the incorrect syntax in the rename function. We are using the == operator, which is not valid for renaming columns.
 
-### SOLUTION: correct the equal operation sign 
+### SOLUTION: correct the equal operation sign, change from "==" to "="
 
 ### CORRECT CODE ###
 #names(movieLens)
@@ -425,7 +425,7 @@ there have been for each year.
 
 ###ASSIGNED TO: Keren
 
-### ISSUE: To find out how many movie reviews there have been for each year without using group_by(), we can directly use count() on the "year" column.
+### ISSUE:The tally() function is primarily used for counting rows within groups, and it expects a grouped data frame as input. To find out how many movie reviews there have been for each year, we need to combine group_by(year) and tally(). To fulfill the request 'without using group_by()', we cannot simply use tally(year), instead we use count() on the "year" column.
 
 ### SOLUTION: Directly use count() on the "year" column.
 
