@@ -85,10 +85,10 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 | **Submit**          | **Review and Merge**  |
 |:--------------------|:--------------------  |
 | Maggie              | Kiana                 |
-| Yuehao (Edison)     |                       |
+| Yuehao (Edison)     | Jacky                 |
 | Kiana               | Maggie                |
-| Keren               |                       |
-| Shengyu (Jacky)     |                       |
+| Keren               |               |
+| Shengyu (Jacky)     | Edison                |
 
 
 
