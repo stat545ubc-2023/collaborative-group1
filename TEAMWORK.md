@@ -87,7 +87,7 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 | Maggie              | Kiana                 |
 | Yuehao (Edison)     | Jacky                 |
 | Kiana               | Maggie                |
-| Keren               |               |
+| Keren               | Edison              |
 | Shengyu (Jacky)     | Edison                |
 
 
