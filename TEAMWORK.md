@@ -77,6 +77,7 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 
 * _**Exercise 0:**_ Merge one Pull Request per teammate: All Team Members
 * _**Exercise 1:**_ Troubleshooting document: All Team Members
+* _**Exercise 2:**_ README file and tidy submission: All Team Members
 * _**Exercise 3:**_ Submitting this Milestone: Jacky
 
 
@@ -86,17 +87,17 @@ Tasks for Milestone 1 will be divided through team discussion on slack. Everyone
 |:--------------------|:--------------------  |
 | Maggie              | Kiana                 |
 | Yuehao (Edison)     | Jacky                 |
-| Kiana               | Maggie, Keren                |
-| Keren               | Edison              |
-| Shengyu (Jacky)     | Edison                |
+| Kiana               | Maggie, Keren         |
+| Keren               | Edison                |
+| Shengyu (Jacky)     | Edison, Kiana         |
 
 
 
 | **Date**  |       **Task**                      |
 |:--------- |:--------------------                |
-| date 27   | Exercise 0: Merge one Pull Request per teammate|
-| date 26   | Exercise 1: Troubleshooting document|
-| date 27   | Exercise 2: README file and tidy submission|
+| Sept 26-28| Exercise 0: Merge one Pull Request per teammate|
+| Sept 26-28| Exercise 1: Troubleshooting document|
+| Sept 29   | Exercise 2: README file and tidy submission|
 | Sept 29   | Exercise 3: Submitting this Milestone: Milestone 2 due|
 
 
