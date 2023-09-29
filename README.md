@@ -2,10 +2,9 @@
 
 # *Milestones 1 and 2*
 
-```{=html}
 <img src="https://www.thescea.org/sites/scea/files/styles/1920wide/public/syndicated/images/student_collaboration.jpeg?itok=a-D1guBW" 
   style="float: right; margin-right: 80px;" width="500" />
-```
+
 ## **Project Team Members**
 
 -   Maggie
